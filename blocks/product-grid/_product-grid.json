@@ -1,0 +1,52 @@
+{
+  "definitions": [
+    {
+      "title": "Product Grid",
+      "id": "product-grid",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Product Grid",
+              "model": "product-grid"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-grid",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "category",
+          "label": "Category Filter",
+          "description": "Filter by category or subcategory (e.g. women, tops)"
+        },
+        {
+          "component": "text",
+          "valueType": "number",
+          "name": "max",
+          "label": "Max Products",
+          "value": "12"
+        },
+        {
+          "component": "multiselect",
+          "name": "style",
+          "label": "Variant",
+          "options": [
+            { "name": "Default", "value": "" },
+            { "name": "Sale", "value": "sale" },
+            { "name": "New Arrivals", "value": "new" },
+            { "name": "Category", "value": "category" }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

@@ -12,10 +12,21 @@
       "image",
       "button",
       "title",
-      "hero",
+      "accordion",
       "cards",
       "columns",
-      "fragment"
+      "form",
+      "fragment",
+      "hero",
+      "product-detail",
+      "product-grid",
+      "tabs"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
     ]
   },
   {
@@ -37,6 +48,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tab"
     ]
   }
 ]
