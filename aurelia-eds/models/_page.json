@@ -1,0 +1,8 @@
+[{
+  "id": "page",
+  "fields": [
+    { "component": "text", "name": "title", "label": "Page Title", "valueType": "string" },
+    { "component": "text", "name": "description", "label": "Meta Description", "valueType": "string" },
+    { "component": "reference", "name": "og:image", "label": "Social Image", "valueType": "string" }
+  ]
+}]

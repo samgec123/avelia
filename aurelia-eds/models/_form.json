@@ -1,0 +1,33 @@
+[{
+  "id": "form",
+  "fields": [
+    { "component": "text", "name": "form-name", "label": "Form Name (analytics)", "valueType": "string" },
+    { "component": "text", "name": "form-type", "label": "Form Type (analytics)", "valueType": "string" },
+    { "component": "text", "name": "submit-label", "label": "Submit Button Label", "valueType": "string" },
+    {
+      "component": "multifield",
+      "name": "fields",
+      "label": "Form Fields",
+      "valueType": "string",
+      "fields": [
+        { "component": "text", "name": "label", "label": "Label", "valueType": "string" },
+        {
+          "component": "select",
+          "name": "type",
+          "label": "Field Type",
+          "valueType": "string",
+          "options": [
+            { "name": "Text", "value": "text" },
+            { "name": "Email", "value": "email" },
+            { "name": "Phone", "value": "tel" },
+            { "name": "Textarea", "value": "textarea" },
+            { "name": "Select", "value": "select" },
+            { "name": "Checkbox", "value": "checkbox" }
+          ]
+        },
+        { "component": "checkbox", "name": "required", "label": "Required" },
+        { "component": "text", "name": "placeholder", "label": "Placeholder / Options", "valueType": "string" }
+      ]
+    }
+  ]
+}]

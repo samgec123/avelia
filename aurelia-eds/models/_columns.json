@@ -1,0 +1,16 @@
+[{
+  "id": "columns",
+  "fields": [
+    {
+      "component": "select",
+      "name": "variant",
+      "label": "Layout",
+      "valueType": "string",
+      "options": [
+        { "name": "2 Columns", "value": "" },
+        { "name": "Sidebar (2:1)", "value": "columns--sidebar" },
+        { "name": "Account (nav + content)", "value": "columns--account" }
+      ]
+    }
+  ]
+}]

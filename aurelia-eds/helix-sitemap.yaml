@@ -1,0 +1,12 @@
+version: 1
+
+sitemaps:
+  default:
+    origin: https://www.aurelia.com
+    include:
+      - /**
+    exclude:
+      - /404
+      - /**.json
+      - /nav
+      - /footer

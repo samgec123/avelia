@@ -1,0 +1,65 @@
+/* Non-critical styles loaded after LCP */
+
+/* ---- DATALAYER INSPECTOR (dev only) ---- */
+.dl-inspector {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  background: var(--ink);
+  color: #bfff8f;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 999;
+  border: 1px solid #444;
+  opacity: 0.85;
+  letter-spacing: 0.04em;
+}
+
+.dl-inspector:hover { opacity: 1; }
+
+.dl-panel {
+  position: fixed;
+  bottom: 56px;
+  left: 16px;
+  width: min(520px, 90vw);
+  max-height: 60vh;
+  background: #0f0f0f;
+  color: #bfff8f;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 16px;
+  border-radius: 4px;
+  overflow: auto;
+  z-index: 999;
+  display: none;
+  border: 1px solid #444;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.dl-panel.show { display: block; }
+
+/* ---- PRINT ---- */
+@media print {
+  .site-header,
+  .utility-bar,
+  .toast,
+  .dl-inspector,
+  .dl-panel {
+    display: none !important;
+  }
+}
+
+/* ---- REDUCED MOTION ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

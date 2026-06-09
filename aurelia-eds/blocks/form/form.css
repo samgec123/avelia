@@ -1,0 +1,70 @@
+/* Form block */
+.aurelia-form {
+  max-width: 760px;
+}
+
+.field-row {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+  color: var(--ink-soft);
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus { border-color: var(--ink); }
+
+textarea.form-input {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.field-row.has-error .form-input {
+  border-color: var(--accent);
+  background: #fbeeea;
+}
+
+.field-row.has-error::after {
+  content: 'This field is required.';
+  display: block;
+  color: var(--accent);
+  font-size: 12px;
+  margin-top: 6px;
+  letter-spacing: 0.04em;
+}
+
+.form-submit { margin-top: 12px; }
+
+.form-success-msg {
+  padding: 32px;
+  background: var(--bg-alt);
+  border-left: 3px solid var(--accent);
+  font-size: 15px;
+  color: var(--ink);
+}
+
+/* Two-column form layout */
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .form-row-2 { grid-template-columns: 1fr; }
+}

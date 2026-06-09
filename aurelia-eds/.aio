@@ -1,0 +1,8 @@
+{
+  rde_enableNotifications: true,
+  cloudmanager_orgid: "24AC619A5E299A9F0A495EFB@AdobeOrg",
+  cloudmanager_programid: "150909",
+  cloudmanager_environmentid: "2101476",
+  cloudmanager_programname: "Adobe AGS1285 Program",
+  cloudmanager_environmentname: "adobe-ags1285-program-rde"
+}

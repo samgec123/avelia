@@ -1,0 +1,247 @@
+/* ==========================================================================
+   AURELIA EDS — Global Stylesheet
+   Design tokens, base elements, EDS section/block primitives.
+   Block-specific styles live in blocks/<name>/<name>.css
+   ========================================================================== */
+
+/* ---- DESIGN TOKENS ---- */
+:root {
+  --bg: #f5f1eb;
+  --bg-alt: #ece6dc;
+  --ink: #1a1a1a;
+  --ink-soft: #555049;
+  --line: #d9d2c5;
+  --accent: #c84a2d;
+  --accent-deep: #8e2f1a;
+  --gold: #b89a5c;
+  --paper: #fffdf9;
+
+  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+
+  --nav-height: 80px;
+  --max-width: 1400px;
+  --section-padding: 100px 40px;
+  --section-padding-tight: 60px 40px;
+}
+
+/* ---- RESET ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- BASE ---- */
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.appear {
+  display: block;
+}
+
+/* EDS hides body until fonts + LCP block are ready */
+body:not(.appear) {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ---- BUTTONS ---- */
+.btn,
+a.btn {
+  display: inline-block;
+  padding: 16px 36px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  cursor: pointer;
+  transition: all 0.25s;
+  font-family: inherit;
+}
+
+.btn:hover,
+a.btn:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn.btn-light,
+a.btn-light {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+
+.btn.btn-light:hover,
+a.btn-light:hover {
+  background: transparent;
+  color: var(--paper);
+  border-color: var(--paper);
+}
+
+.btn.btn-ghost,
+a.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn.btn-ghost:hover,
+a.btn-ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn.btn-accent,
+a.btn-accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+
+.btn.btn-accent:hover,
+a.btn-accent:hover {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+}
+
+/* ---- TYPOGRAPHY UTILITIES ---- */
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  margin-bottom: 16px;
+}
+
+.section-head {
+  margin-bottom: 56px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  max-width: 800px;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--accent-deep);
+}
+
+/* ---- PRODUCT GRADIENT PLACEHOLDERS (shared across blocks) ---- */
+.pg-1  { background: linear-gradient(135deg, #2c2826 0%, #5a4f45 100%); }
+.pg-2  { background: linear-gradient(135deg, #c1a789 0%, #8c6f55 100%); }
+.pg-3  { background: linear-gradient(135deg, #4a5562 0%, #2a323d 100%); }
+.pg-4  { background: linear-gradient(135deg, #d8c3a5 0%, #a07f5e 100%); }
+.pg-5  { background: linear-gradient(135deg, #8b3a2c 0%, #5c2418 100%); }
+.pg-6  { background: linear-gradient(135deg, #6b7264 0%, #3f4640 100%); }
+.pg-7  { background: linear-gradient(135deg, #e6cfb5 0%, #b89578 100%); }
+.pg-8  { background: linear-gradient(135deg, #1f2422 0%, #3d4540 100%); }
+.pg-9  { background: linear-gradient(135deg, #a47263 0%, #6b4438 100%); }
+.pg-10 { background: linear-gradient(135deg, #d4b89c 0%, #8a6b53 100%); }
+.pg-11 { background: linear-gradient(135deg, #2b3540 0%, #54616e 100%); }
+.pg-12 { background: linear-gradient(135deg, #bf8a6a 0%, #7e5a45 100%); }
+
+/* ---- EDS SECTION WRAPPERS ---- */
+main .section {
+  padding: var(--section-padding);
+}
+
+main .section.section-tight {
+  padding: var(--section-padding-tight);
+}
+
+/* Full-bleed sections (no padding override needed — block handles it) */
+main .section.full-width {
+  padding: 0;
+}
+
+/* ---- EDS BLOCK STATE ---- */
+.block[data-block-status='loading'],
+.block[data-block-status='initialized'] {
+  visibility: hidden;
+}
+
+.block[data-block-status='loaded'] {
+  visibility: visible;
+}
+
+/* ---- TOAST (global, shared by blocks) ---- */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 18px 28px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  z-index: 1000;
+  transform: translateY(140%);
+  transition: transform 0.35s ease;
+  border-left: 3px solid var(--accent);
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateY(0);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 800px) {
+  :root {
+    --section-padding: 60px 24px;
+    --section-padding-tight: 40px 24px;
+  }
+}

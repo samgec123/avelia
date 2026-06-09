@@ -1,0 +1,3 @@
+#!/bin/sh
+node tools/build/build.js
+git add component-definition.json component-models.json component-filters.json

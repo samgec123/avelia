@@ -1,0 +1,122 @@
+/* Header block */
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.utility-bar {
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 22px 40px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 0.18em;
+  text-align: center;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.brand:hover { color: var(--ink); }
+
+.brand span {
+  font-style: normal;
+  font-weight: 800;
+}
+
+.nav-primary {
+  display: flex;
+  gap: 32px;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.nav-primary a {
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.nav-primary a:hover,
+.nav-primary a.active {
+  border-bottom-color: var(--ink);
+  color: var(--ink);
+}
+
+.nav-utility {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 22px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nav-utility a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart-link::after {
+  content: attr(data-count);
+  display: inline-block;
+  background: var(--accent);
+  color: var(--paper);
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.cart-link[data-count="0"]::after { display: none; }
+
+.user-chip.logged-in {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  background: #dfead3;
+  color: #3a5128;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .header-inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px 24px;
+  }
+
+  .nav-primary {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 12px;
+  }
+
+  .nav-utility {
+    justify-content: center;
+  }
+}

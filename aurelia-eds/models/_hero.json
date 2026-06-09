@@ -1,0 +1,38 @@
+[{
+  "id": "hero",
+  "fields": [
+    { "component": "reference", "name": "image", "label": "Background Image", "valueType": "string" },
+    { "component": "text", "name": "eyebrow", "label": "Eyebrow Text", "valueType": "string" },
+    { "component": "text", "name": "heading", "label": "Heading", "valueType": "string" },
+    { "component": "richtext", "name": "body", "label": "Body Text" },
+    { "component": "text", "name": "cta-label", "label": "Primary CTA Label", "valueType": "string" },
+    { "component": "text", "name": "cta-url", "label": "Primary CTA URL", "valueType": "string" },
+    { "component": "text", "name": "cta2-label", "label": "Secondary CTA Label", "valueType": "string" },
+    { "component": "text", "name": "cta2-url", "label": "Secondary CTA URL", "valueType": "string" },
+    {
+      "component": "select",
+      "name": "variant",
+      "label": "Variant",
+      "valueType": "string",
+      "options": [
+        { "name": "Default", "value": "" },
+        { "name": "Full Bleed", "value": "hero--full" },
+        { "name": "Split", "value": "hero--split" },
+        { "name": "Category", "value": "hero--cat" },
+        { "name": "Editorial", "value": "hero--editorial" },
+        { "name": "Error", "value": "hero--error" }
+      ]
+    }
+  ]
+},
+{
+  "id": "hero",
+  "plugins": {
+    "xwalk": {
+      "page": {
+        "resourceType": "core/franklin/components/block/v1/block",
+        "template": { "name": "Hero", "model": "hero" }
+      }
+    }
+  }
+}]

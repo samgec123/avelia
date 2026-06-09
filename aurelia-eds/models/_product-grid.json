@@ -1,0 +1,18 @@
+[{
+  "id": "product-grid",
+  "fields": [
+    { "component": "text", "name": "category", "label": "Category Filter (e.g. w-tops, m-bottoms)", "valueType": "string" },
+    { "component": "number", "name": "max", "label": "Max Products to Show" },
+    {
+      "component": "select",
+      "name": "variant",
+      "label": "Variant",
+      "valueType": "string",
+      "options": [
+        { "name": "Default", "value": "" },
+        { "name": "Sale Items", "value": "product-grid--sale" },
+        { "name": "New Arrivals", "value": "product-grid--new" }
+      ]
+    }
+  ]
+}]

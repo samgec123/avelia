@@ -1,0 +1,7 @@
+[{
+  "id": "image",
+  "fields": [
+    { "component": "reference", "name": "fileReference", "label": "Image", "valueType": "string" },
+    { "component": "text", "name": "alt", "label": "Alt Text", "valueType": "string" }
+  ]
+}]

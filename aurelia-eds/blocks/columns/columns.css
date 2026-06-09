@@ -1,0 +1,32 @@
+/* Columns block */
+.columns .columns-row {
+  display: grid;
+  grid-template-columns: repeat(var(--columns, 2), 1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.columns .columns-row + .columns-row { margin-top: 56px; }
+
+.columns .columns-col img,
+.columns .columns-col picture { width: 100%; }
+
+/* Sticky sidebar (used in cart, account pages) */
+.columns.columns--sidebar .columns-row {
+  grid-template-columns: 2fr 1fr;
+  gap: 64px;
+}
+
+.columns.columns--account .columns-row {
+  grid-template-columns: 240px 1fr;
+  gap: 56px;
+}
+
+@media (max-width: 900px) {
+  .columns .columns-row,
+  .columns.columns--sidebar .columns-row,
+  .columns.columns--account .columns-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

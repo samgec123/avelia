@@ -1,0 +1,16 @@
+{
+  "name": "aurelia-eds",
+  "version": "1.0.0",
+  "description": "AURELIA — Luxury fashion e-commerce on AEM Edge Delivery Services",
+  "scripts": {
+    "lint": "eslint blocks scripts && stylelint blocks/**/*.css styles/*.css",
+    "build": "node tools/build/build.js"
+  },
+  "devDependencies": {
+    "@adobe/eslint-config-helix": "^2.0.5",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "stylelint": "^16.3.1",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}

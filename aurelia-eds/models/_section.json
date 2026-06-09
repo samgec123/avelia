@@ -1,0 +1,17 @@
+[{
+  "id": "section",
+  "fields": [
+    {
+      "component": "select",
+      "name": "style",
+      "label": "Section Style",
+      "valueType": "string",
+      "options": [
+        { "name": "Default", "value": "" },
+        { "name": "Tight Padding", "value": "section-tight" },
+        { "name": "Full Width", "value": "full-width" },
+        { "name": "Dark Background", "value": "dark" }
+      ]
+    }
+  ]
+}]

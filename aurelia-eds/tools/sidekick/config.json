@@ -1,0 +1,12 @@
+{
+  "project": "AURELIA",
+  "plugins": [
+    {
+      "id": "publish",
+      "title": "Publish",
+      "environments": ["edit"],
+      "url": "/tools/sidekick/publish.html",
+      "isPalette": false
+    }
+  ]
+}

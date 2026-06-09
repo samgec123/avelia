@@ -1,0 +1,15 @@
+[{
+  "id": "tabs",
+  "fields": [
+    {
+      "component": "multifield",
+      "name": "tabs",
+      "label": "Tabs",
+      "valueType": "string",
+      "fields": [
+        { "component": "text", "name": "label", "label": "Tab Label", "valueType": "string" },
+        { "component": "richtext", "name": "content", "label": "Tab Content" }
+      ]
+    }
+  ]
+}]

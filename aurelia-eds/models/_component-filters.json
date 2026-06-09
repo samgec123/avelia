@@ -1,0 +1,14 @@
+[
+  {
+    "id": "main",
+    "components": ["hero", "cards", "columns", "tabs", "accordion", "form", "product-grid", "product-detail", "fragment"]
+  },
+  {
+    "id": "hero-section",
+    "components": ["hero"]
+  },
+  {
+    "id": "content-section",
+    "components": ["cards", "columns", "tabs", "accordion", "form", "fragment"]
+  }
+]

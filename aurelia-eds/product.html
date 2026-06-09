@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product · AURELIA</title>
+  <meta name="description" content="Shop AURELIA — considered essentials, designed in Milan.">
+  <meta name="urn:adobe:aue:system:aemconnection" content="aem:https://author-placeholder.adobeaemcloud.com">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="icon" href="/icons/logo.svg">
+  <script type="module" src="/scripts/scripts.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.adobeDataLayer = window.adobeDataLayer || [];
+      window.adobeDataLayer.push({ event: 'page view', page: { pageName: 'product', pageType: 'product', siteSection: 'shop' } });
+    });
+  </script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="product-detail"
+           data-aue-resource="urn:aemconnection:/content/aurelia-eds/en/product/jcr:content/root/product-detail"
+           data-aue-type="component" data-aue-label="Product Detail">
+        <div><div></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-head">
+        <p class="eyebrow">You May Also Like</p>
+        <h2 class="section-title">Complete the <em>Look</em></h2>
+      </div>
+      <div class="product-grid">
+        <div><div>Config: max: 4</div></div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

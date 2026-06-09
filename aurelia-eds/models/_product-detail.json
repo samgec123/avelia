@@ -1,0 +1,6 @@
+[{
+  "id": "product-detail",
+  "fields": [
+    { "component": "text", "name": "product-id", "label": "Product ID (resolved from URL ?id= param)", "valueType": "string" }
+  ]
+}]

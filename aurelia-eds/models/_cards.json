@@ -1,0 +1,31 @@
+[{
+  "id": "cards",
+  "fields": [
+    {
+      "component": "select",
+      "name": "variant",
+      "label": "Card Type",
+      "valueType": "string",
+      "options": [
+        { "name": "Default", "value": "" },
+        { "name": "Category (Duo)", "value": "cards--category" },
+        { "name": "Subcategory", "value": "cards--subcategory" },
+        { "name": "Article", "value": "cards--article" },
+        { "name": "Store", "value": "cards--store" }
+      ]
+    },
+    {
+      "component": "multifield",
+      "name": "cards",
+      "label": "Cards",
+      "valueType": "string",
+      "fields": [
+        { "component": "reference", "name": "image", "label": "Image", "valueType": "string" },
+        { "component": "text", "name": "heading", "label": "Heading", "valueType": "string" },
+        { "component": "text", "name": "description", "label": "Description", "valueType": "string" },
+        { "component": "text", "name": "link", "label": "Link URL", "valueType": "string" },
+        { "component": "text", "name": "gradient", "label": "Gradient CSS (category cards)", "valueType": "string" }
+      ]
+    }
+  ]
+}]

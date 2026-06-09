@@ -1,0 +1,119 @@
+[
+  {
+    "id": "hero",
+    "fields": [
+      { "component": "reference", "name": "image", "label": "Background Image", "valueType": "string" },
+      { "component": "text", "name": "eyebrow", "label": "Eyebrow Text", "valueType": "string" },
+      { "component": "text", "name": "heading", "label": "Heading", "valueType": "string" },
+      { "component": "richtext", "name": "body", "label": "Body Text" },
+      { "component": "text", "name": "cta-label", "label": "Primary CTA Label", "valueType": "string" },
+      { "component": "text", "name": "cta-url", "label": "Primary CTA URL", "valueType": "string" },
+      { "component": "text", "name": "cta2-label", "label": "Secondary CTA Label", "valueType": "string" },
+      { "component": "text", "name": "cta2-url", "label": "Secondary CTA URL", "valueType": "string" },
+      {
+        "component": "select", "name": "variant", "label": "Variant", "valueType": "string",
+        "options": [
+          { "name": "Default", "value": "" },
+          { "name": "Full Bleed", "value": "hero--full" },
+          { "name": "Split", "value": "hero--split" },
+          { "name": "Category", "value": "hero--cat" },
+          { "name": "Editorial", "value": "hero--editorial" },
+          { "name": "Error", "value": "hero--error" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "select", "name": "variant", "label": "Card Type", "valueType": "string",
+        "options": [
+          { "name": "Default", "value": "" },
+          { "name": "Category (Duo)", "value": "cards--category" },
+          { "name": "Subcategory", "value": "cards--subcategory" },
+          { "name": "Article", "value": "cards--article" },
+          { "name": "Store", "value": "cards--store" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "select", "name": "variant", "label": "Layout", "valueType": "string",
+        "options": [
+          { "name": "2 Columns", "value": "" },
+          { "name": "Sidebar (2:1)", "value": "columns--sidebar" },
+          { "name": "Account", "value": "columns--account" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "multifield", "name": "tabs", "label": "Tabs",
+        "fields": [
+          { "component": "text", "name": "label", "label": "Tab Label", "valueType": "string" },
+          { "component": "richtext", "name": "content", "label": "Tab Content" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multifield", "name": "items", "label": "Items",
+        "fields": [
+          { "component": "text", "name": "question", "label": "Question", "valueType": "string" },
+          { "component": "richtext", "name": "answer", "label": "Answer" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      { "component": "text", "name": "form-name", "label": "Form Name", "valueType": "string" },
+      { "component": "text", "name": "form-type", "label": "Form Type", "valueType": "string" },
+      { "component": "text", "name": "submit-label", "label": "Submit Label", "valueType": "string" }
+    ]
+  },
+  {
+    "id": "product-grid",
+    "fields": [
+      { "component": "text", "name": "category", "label": "Category Filter", "valueType": "string" },
+      { "component": "number", "name": "max", "label": "Max Items" }
+    ]
+  },
+  {
+    "id": "product-detail",
+    "fields": [
+      { "component": "text", "name": "product-id", "label": "Product ID", "valueType": "string" }
+    ]
+  },
+  {
+    "id": "page",
+    "fields": [
+      { "component": "text", "name": "title", "label": "Page Title", "valueType": "string" },
+      { "component": "text", "name": "description", "label": "Meta Description", "valueType": "string" }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "select", "name": "style", "label": "Section Style", "valueType": "string",
+        "options": [
+          { "name": "Default", "value": "" },
+          { "name": "Tight", "value": "section-tight" },
+          { "name": "Full Width", "value": "full-width" }
+        ]
+      }
+    ]
+  }
+]

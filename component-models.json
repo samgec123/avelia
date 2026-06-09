@@ -52,30 +52,12 @@
         "name": "titleType",
         "label": "Title Type",
         "options": [
-          {
-            "name": "h1",
-            "value": "h1"
-          },
-          {
-            "name": "h2",
-            "value": "h2"
-          },
-          {
-            "name": "h3",
-            "value": "h3"
-          },
-          {
-            "name": "h4",
-            "value": "h4"
-          },
-          {
-            "name": "h5",
-            "value": "h5"
-          },
-          {
-            "name": "h6",
-            "value": "h6"
-          }
+          { "name": "h1", "value": "h1" },
+          { "name": "h2", "value": "h2" },
+          { "name": "h3", "value": "h3" },
+          { "name": "h4", "value": "h4" },
+          { "name": "h5", "value": "h5" },
+          { "name": "h6", "value": "h6" }
         ]
       }
     ]
@@ -103,18 +85,9 @@
         "name": "linkType",
         "label": "Type",
         "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          }
+          { "name": "default", "value": "" },
+          { "name": "primary", "value": "primary" },
+          { "name": "secondary", "value": "secondary" }
         ]
       }
     ]
@@ -133,11 +106,38 @@
         "name": "style",
         "label": "Style",
         "options": [
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          }
+          { "name": "Highlight", "value": "highlight" }
         ]
+      }
+    ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          { "name": "Default", "value": "" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "question",
+        "label": "Question / Title"
+      },
+      {
+        "component": "richtext",
+        "name": "answer",
+        "label": "Answer / Content",
+        "valueType": "string"
       }
     ]
   },
@@ -180,6 +180,28 @@
     ]
   },
   {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "form-name",
+        "label": "Form Name"
+      },
+      {
+        "component": "select",
+        "name": "form-type",
+        "label": "Form Type",
+        "options": [
+          { "name": "Standard", "value": "standard" },
+          { "name": "Contact", "value": "contact" },
+          { "name": "Newsletter", "value": "newsletter" },
+          { "name": "Register", "value": "register" }
+        ]
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -211,6 +233,78 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "product-detail",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "product-id",
+        "label": "Product ID",
+        "description": "Override product ID (defaults to ?id= URL param)"
+      }
+    ]
+  },
+  {
+    "id": "product-grid",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "category",
+        "label": "Category Filter",
+        "description": "Filter by category or subcategory (e.g. women, tops)"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "max",
+        "label": "Max Products",
+        "value": "12"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Variant",
+        "options": [
+          { "name": "Default", "value": "" },
+          { "name": "Sale", "value": "sale" },
+          { "name": "New Arrivals", "value": "new" },
+          { "name": "Category", "value": "category" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          { "name": "Default", "value": "" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Tab Label"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Tab Content",
         "valueType": "string"
       }
     ]

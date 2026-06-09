@@ -1,0 +1,15 @@
+[{
+  "id": "accordion",
+  "fields": [
+    {
+      "component": "multifield",
+      "name": "items",
+      "label": "Accordion Items",
+      "valueType": "string",
+      "fields": [
+        { "component": "text", "name": "question", "label": "Question / Title", "valueType": "string" },
+        { "component": "richtext", "name": "answer", "label": "Answer / Content" }
+      ]
+    }
+  ]
+}]

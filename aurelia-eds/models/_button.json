@@ -1,0 +1,19 @@
+[{
+  "id": "button",
+  "fields": [
+    { "component": "text", "name": "jcr:title", "label": "Button Label", "valueType": "string" },
+    { "component": "text", "name": "link", "label": "Link URL", "valueType": "string" },
+    {
+      "component": "select",
+      "name": "type",
+      "label": "Button Style",
+      "valueType": "string",
+      "options": [
+        { "name": "Primary", "value": "btn" },
+        { "name": "Light", "value": "btn-light" },
+        { "name": "Ghost", "value": "btn-ghost" },
+        { "name": "Accent", "value": "btn-accent" }
+      ]
+    }
+  ]
+}]

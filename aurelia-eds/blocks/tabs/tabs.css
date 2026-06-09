@@ -1,0 +1,42 @@
+/* Tabs block */
+.tabs-list {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 32px;
+  gap: 0;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  padding: 14px 28px;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: inherit;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tab-btn:hover { color: var(--ink); }
+
+.tab-btn.active {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.tab-panel { line-height: 1.7; }
+
+.tab-panel p { margin-bottom: 16px; color: var(--ink-soft); }
+
+.tab-panel ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.tab-panel li { margin-bottom: 8px; color: var(--ink-soft); }
